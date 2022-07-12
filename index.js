@@ -6,6 +6,7 @@ var emailId = document.getElementById("emailId").value;
 
 
     if(nameId === ""){
+        document.getElementById("inA").style.transition = "100ms"
         document.getElementById("inA").innerHTML = "Please Enter Your Name"
         document.getElementById("inA").style.color = "Red"
         document.getElementById("inA").style.display = "flex"
@@ -13,8 +14,9 @@ var emailId = document.getElementById("emailId").value;
     }
     
     else{
+        document.getElementById("inA").style.transition = "100ms"
         document.getElementById("inA").innerHTML = "Good"
-        document.getElementById("inA").style.color = "Green"
+        document.getElementById("inA").style.color = "rgb(6, 250, 6)"
         document.getElementById("inA").style.display = "flex"
     }
 }    
@@ -33,7 +35,7 @@ var emailId = document.getElementById("emailId").value;
     }
     else{
         document.getElementById("inB").innerHTML = "Good"
-        document.getElementById("inB").style.color = "Green"
+        document.getElementById("inB").style.color = "rgb(6, 250, 6)"
         document.getElementById("inB").style.display = "flex"
 
     }
@@ -54,7 +56,7 @@ var emailId = document.getElementById("emailId").value;
 
         else if(pass === cpass){
             document.getElementById("inC").innerHTML = "Good"
-            document.getElementById("inC").style.color = "Green"
+            document.getElementById("inC").style.color = "rgb(6, 250, 6)"
             document.getElementById("inC").style.display = "flex"
     
             }
@@ -85,7 +87,7 @@ document.getElementById("emailId").innerHTML = val + "lavat"
     }
     else{
         document.getElementById("inD").innerHTML = "Good"
-        document.getElementById("inD").style.color = "Green"
+        document.getElementById("inD").style.color = "rgb(6, 250, 6)"
         document.getElementById("inD").style.display = "flex"
     }
 }
