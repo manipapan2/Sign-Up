@@ -6,7 +6,6 @@ var emailId = document.getElementById("emailId").value;
 
 
     if(nameId === ""){
-        document.getElementById("inA").style.transition = "100ms"
         document.getElementById("inA").innerHTML = "Please Enter Your Username"
         document.getElementById("inA").style.color = "Red"
         document.getElementById("inA").style.display = "flex"
@@ -14,7 +13,6 @@ var emailId = document.getElementById("emailId").value;
     }
     
     else{
-        document.getElementById("inA").style.transition = "100ms"
         document.getElementById("inA").innerHTML = "Good"
         document.getElementById("inA").style.color = "rgb(6, 250, 6)"
         document.getElementById("inA").style.display = "flex"
@@ -62,7 +60,7 @@ var emailId = document.getElementById("emailId").value;
             }
 
     else{
-        document.getElementById("inC").innerHTML = "Please Confirm Your Corectly"
+        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly"
         document.getElementById("inC").style.color = "Red"
         document.getElementById("inC").style.display = "flex"
 
@@ -75,12 +73,9 @@ var cpass = document.getElementById("wet").value;
 var nameId = document.getElementById("nameId").value;
 var email = document.getElementById("emailId").value; 
     
-var val = document.getElementById("emailId").value
-document.getElementById("emailId").innerHTML = val + "lavat"
-
 
     if(email === ""){
-        document.getElementById("inD").innerHTML = "Please Enter Your Email"
+        document.getElementById("inD").innerHTML = "Please Enter Your Gmail"
         document.getElementById("inD").style.color = "Red"
         document.getElementById("inD").style.display = "flex"
         
