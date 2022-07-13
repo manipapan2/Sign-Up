@@ -7,7 +7,7 @@ var emailId = document.getElementById("emailId").value;
 
     if(nameId === ""){
         document.getElementById("inA").style.transition = "100ms"
-        document.getElementById("inA").innerHTML = "Please Enter Your Name"
+        document.getElementById("inA").innerHTML = "Please Enter Your Username"
         document.getElementById("inA").style.color = "Red"
         document.getElementById("inA").style.display = "flex"
 
