@@ -43,9 +43,7 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     background-color: transparent;
     backdrop-filter: blur(6px);
-    justify-content: center ;
 
-    
 }
 
 
@@ -67,6 +65,7 @@ body{
     color: red;
     transition: 200ms;
     font-size: 14px;
+    
 }
 
 input[type="text"],
@@ -74,7 +73,7 @@ input[type="password"],
 input[type="email"]{
   display: block;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin:0 0 20px 0;
   padding: 4px;
   width: 220px;
   height: 32px;
@@ -127,7 +126,7 @@ input[type='submit']:active{
 input[type='text']::placeholder,
 input[type='password']::placeholder,
 input[type="email"]::placeholder {
-    color: rgb(27, 163, 163);
+    color: rgb(0, 255, 255);
     user-select: none;
 }
 
@@ -138,35 +137,32 @@ input[type="email"]::placeholder {
         height: 100%;
     }
 
-    #left{
-        padding: 40px ;
-        height: 400px;
+    #left {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
     }
 
     input[type="text"],
-input[type="password"],
-input[type="email"]{
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  padding: 4px;
-  width: 220px;
-  height: 32px;
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  transition: 100ms ;
-  color: bisque;
-  user-select: none;
-  
-}
+    input[type="password"],
+    input[type="email"],
+    input[type="submit"]{
+        
+        width: 80%; 
+        height: 10%;
+        margin-left: 50px;       
+        margin-top: 3%;
+        margin-bottom: 3%;
+        padding: ;
 
-#left{
-    justify-content: center;
-    align-items: center;
-}
+    }
 
+
+    #inA , #inB , #inC , #inD{
+        width: 80%; 
+        margin-left: 50px;       
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
 }
