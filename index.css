@@ -98,7 +98,7 @@ input[type="email"]:focus{
 
 
 input[type='submit']{
-    margin-top: 28px;
+    margin-top: 1px;
     width: 120px;
     height: 32px;
     background: #16a085;
