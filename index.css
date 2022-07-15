@@ -19,7 +19,7 @@ body{
     align-items: center ;
 }
 
-#bodyFake{
+.bodyFake{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -35,19 +35,19 @@ body{
 } 
 
 
-#fp{
-    position: relative;
-    width: 300px;
-    height: 450px;
-    border-radius: 2px;
+ .fp{
+    position: relative ;
+    width: 300px ;
+    height: 450px ;
+    border-radius: 2px ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    background-color: transparent;
-    backdrop-filter: blur(6px);
+    background-color: transparent ;
+    backdrop-filter: blur(6px) ;
 
 }
 
 
-#left{
+.left{
     position: absolute;
     top: 0;
     left: 0;
@@ -59,7 +59,7 @@ body{
 }
 
 
-#inA , #inB , #inC , #inD{
+.inA , .inB , .inC , .inD{
     display: none;
     width: 500px;
     color: red;
@@ -133,12 +133,12 @@ input[type="email"]::placeholder {
 
 @media only screen and (max-width: 767px) {
 
-    #fp{
+    .fp{
         width: 100%;
         height: 100%;
     }
 
-    #left {
+    .left {
         height: 100%;
         justify-content: center;
         align-items: center;
@@ -150,7 +150,7 @@ input[type="email"]::placeholder {
     input[type="password"],
     input[type="email"]{
         
-        width: 80%; 
+        width: 90%; 
         height: 10%;
         margin-left: 7%;       
         margin-top: 3%;
@@ -185,17 +185,23 @@ input[type="email"]:focus{
     
 
 
-    #inA , #inB , #inC , #inD{
+    .inA , .inB , .inC , .inD{
         width: 80%; 
-        margin-left: 50px;       
-        margin-top: 1%;
-        margin-bottom: 1%;
+        margin-left: 10%;       
         font-size: 130%;
+        margin-bottom: 0%;
     }
 }
 
 @media only screen and (max-height: 600px) {
-    #left{
+    .left{
         padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 401px) {
+    .inA , .inB , .inC , .inD{
+        width: 80%; 
+        font-size: 100%;
     }
 }
