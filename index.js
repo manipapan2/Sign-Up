@@ -52,7 +52,7 @@ var emailId = document.getElementById("emailId").value;
     
 
         if(pass === '' && cpass === ''){
-            document.getElementById("inC").style.display = "none"
+            document.getElementById("inC").style.display = "flex"
 
         }
 
