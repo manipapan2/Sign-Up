@@ -1,16 +1,21 @@
-//onkeyup
-document.getElementById("nameId").addEventListener("keyup" , checkname);
-document.getElementById("wer").addEventListener("keyup" , checkpass);
-document.getElementById("wer").addEventListener("keyup" , checkcpass);
-document.getElementById("wet").addEventListener("keyup" , checkcpass);
-document.getElementById("emailId").addEventListener("keyup" , checkemail);
-document.getElementById("submitButton").addEventListener("click" , checkname);
-document.getElementById("submitButton").addEventListener("click" , checkcpass);
-document.getElementById("submitButton").addEventListener("click" , checkpass);
-document.getElementById("submitButton").addEventListener("click" , checkemail);
+//var=========================================================================================
+var nameId = document.getElementById("nameId");
+var passasl = document.getElementById("passasl");
+var passc = document.getElementById("passc");
+var emailId = document.getElementById("emailId");
+var submitButton = document.getElementById("submitButton");
 //============================================================================================
 
-//functions
+//onkeyup=====================================================================================
+nameId.addEventListener("keyup" , checkname);
+passasl.addEventListener("keyup" , checkpass);
+passasl.addEventListener("keyup" , checkcpass);
+passc.addEventListener("keyup" , checkcpass);
+emailId.addEventListener("keyup" , checkemail);
+submitButton.addEventListener("click" , click);
+//============================================================================================
+
+//functions===================================================================================
 function checkname(){
     var nameId = document.getElementById("nameId").value;
     
@@ -34,10 +39,10 @@ function checkname(){
 
 
 function checkpass(){
-    var pass = document.getElementById("wer").value;
+    var passasl = document.getElementById("passasl").value;
     
         
-        if(pass === ""){
+        if(passasl === ""){
             document.getElementById("inB").innerHTML = "Please Enter Your Password"
             document.getElementById("inB").style.color = "Red"
             document.getElementById("inB").style.fontWeight = "bold"
@@ -55,15 +60,15 @@ function checkpass(){
 
 
 function checkcpass(){
-    var pass = document.getElementById("wer").value;
-    var cpass = document.getElementById("wet").value;
+    var passasl = document.getElementById("passasl").value;
+    var passc = document.getElementById("passc").value;
                 
-        if(pass === '' && cpass === ''){
+        if(passasl === '' && passc === ''){
             document.getElementById("inC").style.display = "flex"
 
         }
             
-        else if(pass === cpass){
+        else if(passasl === passc){
             document.getElementById("inC").innerHTML = "Good"
             document.getElementById("inC").style.color = "rgb(6, 250, 6)"
             document.getElementById("inC").style.fontWeight = "bold"
@@ -98,5 +103,9 @@ function checkemail(){
             document.getElementById("inD").style.display = "flex"
         }
     }
+
+function click(){
+    checkcpass();checkpass();checkemail();checkname();
+}
  
 //============================================================================================
