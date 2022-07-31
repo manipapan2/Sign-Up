@@ -9,7 +9,7 @@
     outline: 0;
 }
 
-
+/*div*/
 body{
     font-size: 16px;
     color: #222;
@@ -26,7 +26,7 @@ body{
     display: flex;
     justify-content: center ;
     align-items: center ;
-    background-image: url(nope.jfif);
+    background-image: url(/images/nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -57,6 +57,7 @@ body{
     height: 400px;
      
 }
+/*=============================================*/
 
 
 .inA , .inB , .inC , .inD{
@@ -122,6 +123,55 @@ input[type='submit']:active{
     transform: scale(0.9);
 }
 
+
+button{
+    display: flex;
+    margin-top: 1px;
+    width: 120px;
+    height: 32px;
+    background: #16a085;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+button:active{
+    background: #084e40;
+    transform: scale(0.9);
+}
+
+
+.anicharhk{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(247, 5, 25);
+    animation: spinb 900ms infinite linear;
+    display: none;
+}
+
+@keyframes spinb {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
 input[type='text']::placeholder,
 input[type='password']::placeholder,
 input[type="email"]::placeholder {
@@ -167,7 +217,7 @@ input[type="email"]:focus{
 }
 
 
-    input[type="submit"]{
+    input[type="submit"],button{
         width: 80%; 
         height: 10%;
         margin-left: 5px;       
@@ -177,7 +227,7 @@ input[type="email"]:focus{
         font-size: 130%;
     }
 
-    input[type='submit']:active{
+    input[type='submit']:active , button:active{
         background: #084e40;
         transform: scale(0.7);
     }

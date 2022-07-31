@@ -12,7 +12,7 @@ passasl.addEventListener("keyup" , checkpass);
 passasl.addEventListener("keyup" , checkcpass);
 passc.addEventListener("keyup" , checkcpass);
 emailId.addEventListener("keyup" , checkemail);
-submitButton.addEventListener("click" , click);
+submitButton.addEventListener("click" , clickall);
 //============================================================================================
 
 //functions===================================================================================
@@ -34,6 +34,8 @@ function checkname(){
             document.getElementById("inA").style.color = "rgb(6, 250, 6)"
             document.getElementById("inA").style.fontWeight = "bold"
             document.getElementById("inA").style.display = "flex"
+            return true;
+
         }
 }    
 
@@ -47,6 +49,7 @@ function checkpass(){
             document.getElementById("inB").style.color = "Red"
             document.getElementById("inB").style.fontWeight = "bold"
             document.getElementById("inB").style.display = "flex"
+            return false;
         
         }
         else{
@@ -54,6 +57,7 @@ function checkpass(){
             document.getElementById("inB").style.color = "rgb(6, 250, 6)"
             document.getElementById("inB").style.fontWeight = "bold"
             document.getElementById("inB").style.display = "flex"
+            return true;
         
         }
 }
@@ -65,6 +69,7 @@ function checkcpass(){
                 
         if(passasl === '' && passc === ''){
             document.getElementById("inC").style.display = "flex"
+            return false;
 
         }
             
@@ -73,6 +78,7 @@ function checkcpass(){
             document.getElementById("inC").style.color = "rgb(6, 250, 6)"
             document.getElementById("inC").style.fontWeight = "bold"
             document.getElementById("inC").style.display = "flex"
+            return true;
                 
         }
             
@@ -81,6 +87,7 @@ function checkcpass(){
             document.getElementById("inC").style.color = "Red"
             document.getElementById("inC").style.fontWeight = "bold"
             document.getElementById("inC").style.display = "flex"
+            return false;
             
         }
 }
@@ -94,6 +101,7 @@ function checkemail(){
             document.getElementById("inD").style.color = "Red"
             document.getElementById("inD").style.fontWeight = "bold"
             document.getElementById("inD").style.display = "flex"
+            return false;
             
         }
         else{
@@ -101,11 +109,24 @@ function checkemail(){
             document.getElementById("inD").style.color = "rgb(6, 250, 6)"
             document.getElementById("inD").style.fontWeight = "bold"
             document.getElementById("inD").style.display = "flex"
+            return true;
+
         }
     }
 
-function click(){
-    checkcpass();checkpass();checkemail();checkname();
+function clickall(){
+    if(checkname() && checkemail() && checkpass() && checkcpass()){
+        var loading = document.getElementById("loading");
+        var text = document.getElementById("submitText");
+
+        text.style.display = "none"
+        submitButton.style.background = "#1c4d43"
+        loading.style.display = "block";
+    }
+    else{
+        checkcpass();checkpass();checkemail();checkname();
+    }
+    
 }
  
 //============================================================================================
