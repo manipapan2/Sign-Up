@@ -96,7 +96,6 @@ body{
     color:rgb(6, 250, 6);
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 0;
 
 }
 
@@ -268,6 +267,9 @@ input[type="email"]::placeholder {
 
     .inA , .inB , .inC , .inD{
         width: 80%;
+        margin-bottom: 0%;
+    }
+    .acces{
         margin-bottom: 0%;
     }
 }
