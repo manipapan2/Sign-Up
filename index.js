@@ -22,7 +22,7 @@ function checkname(){
     
     
     if(nameId === ""){
-        document.getElementById("inA").innerHTML = "Please Enter Your Username"
+        document.getElementById("inA").innerHTML = "Please Enter Your Username";
         document.getElementById('inA').classList.remove("acces");
         document.getElementById('inA').classList.add("inA");
         return false;
@@ -32,7 +32,7 @@ function checkname(){
     else{
         document.getElementById('inA').classList.add("acces");
         document.getElementById('inA').classList.remove("inA");
-        document.getElementById("inA").innerHTML = "Good"
+        document.getElementById("inA").innerHTML = "Good";
         return true;
 
     }
@@ -44,14 +44,14 @@ function checkpass(){
     
         
     if(passasl === ""){
-        document.getElementById("inB").innerHTML = "Please Enter Your Password"
+        document.getElementById("inB").innerHTML = "Please Enter Your Password";
         document.getElementById('inB').classList.remove("acces");
         document.getElementById('inB').classList.add("inB");
         return false;
         
     }
     else{
-        document.getElementById("inB").innerHTML = "Good"
+        document.getElementById("inB").innerHTML = "Good";
         document.getElementById('inB').classList.add("acces");
         document.getElementById('inB').classList.remove("inB");
         return true;
@@ -71,17 +71,17 @@ function checkcpass(){
     }
             
     else if(passasl === passc){
-        document.getElementById("inC").innerHTML = "Good"
-        document.getElementById('inC').classList.remove("inb");
+        document.getElementById("inC").innerHTML = "Good";
+        document.getElementById('inC').classList.remove("inC");
         document.getElementById('inC').classList.add("acces");
         return true;
                 
     }
             
     else{
-        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly"
+        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly";
         document.getElementById('inC').classList.remove("acces");
-        document.getElementById('inC').classList.add("inb");
+        document.getElementById('inC').classList.add("inC");
         return false;
             
     }
@@ -92,16 +92,16 @@ function checkemail(){
     var email = document.getElementById("emailId").value; 
         
     if(email === ""){
-        document.getElementById("inD").innerHTML = "Please Enter Your Gmail"
+        document.getElementById("inD").innerHTML = "Please Enter Your Gmail";
         document.getElementById('inD').classList.remove("acces");
-        document.getElementById('inD').classList.add("inB");
+        document.getElementById('inD').classList.add("inD");
         return false;
             
     }
     else{
-        document.getElementById("inD").innerHTML = "Good"
+        document.getElementById("inD").innerHTML = "Good";
         document.getElementById('inD').classList.add("acces");
-        document.getElementById('inD').classList.remove("inB");
+        document.getElementById('inD').classList.remove("inD");
         return true;
 
     }
@@ -113,19 +113,19 @@ function checknamel(){
         
         
     if(nameId === ""){
-        document.getElementById("inA").innerHTML = "Please Enter Your Username"
+        document.getElementById("inA").innerHTML = "Please Enter Your Username";
         document.getElementById('inA').classList.remove("acces");
         document.getElementById('inA').classList.add("inA");
         document.getElementById("nameId").classList.add("larzesh");
-        setTimeout(pak,200)
+        setTimeout(pak,200);
         return false;
         
     }
             
     else{
+        document.getElementById("inA").innerHTML = "Good";
         document.getElementById('inA').classList.add("acces");
         document.getElementById('inA').classList.remove("inA");
-        document.getElementById("inA").innerHTML = "Good"
         return true;
     
     }
@@ -160,25 +160,25 @@ function checkcpassl(){
     var passc = document.getElementById("passc").value;
                     
     if(passasl === '' && passc === ''){
-        document.getElementById("inC").style.display = "flex"
+        document.getElementById("inC").style.display = "flex";
         document.getElementById("passasl").classList.add("larzesh");
-        setTimeout(pak,200)
+        setTimeout(pak,200);
         return false;
     
     }
                 
     else if(passasl === passc){
-        document.getElementById("inC").innerHTML = "Good"
-        document.getElementById('inC').classList.remove("inb");
+        document.getElementById("inC").innerHTML = "Good";
         document.getElementById('inC').classList.add("acces");
+        document.getElementById('inC').classList.remove("inC");
         return true;
                     
     }
                 
     else{
-        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly"
+        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly";
         document.getElementById('inC').classList.remove("acces");
-        document.getElementById('inC').classList.add("inb");
+        document.getElementById('inC').classList.add("inC");
         document.getElementById("passc").classList.add("larzesh");
         setTimeout(pak,200)
         return false;
@@ -191,9 +191,9 @@ function checkemaill(){
     var email = document.getElementById("emailId").value; 
             
     if(email === ""){
-        document.getElementById("inD").innerHTML = "Please Enter Your Gmail"
+        document.getElementById("inD").innerHTML = "Please Enter Your Gmail";
         document.getElementById('inD').classList.remove("acces");
-        document.getElementById('inD').classList.add("inB");
+        document.getElementById('inD').classList.add("inD");
         document.getElementById("emailId").classList.add("larzesh");
         setTimeout(pak,200)
         return false;
@@ -202,7 +202,7 @@ function checkemaill(){
     else{
         document.getElementById("inD").innerHTML = "Good"
         document.getElementById('inD').classList.add("acces");
-        document.getElementById('inD').classList.remove("inB");
+        document.getElementById('inD').classList.remove("inD");
         return true;
     
     }
