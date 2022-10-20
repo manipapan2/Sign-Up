@@ -221,7 +221,7 @@ input[type="email"]::placeholder {
 
 @media only screen and (max-width: 767px) {
     .bodyFake{
-        padding: 40px;
+        padding: 60px;
             background-image: url(nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,10 +229,10 @@ input[type="email"]::placeholder {
     }
 
     .fp{
-        margin: 0;
+        margin: 20px 0 0 0;
         padding: 0;
         width: 100%;
-        height: 600px;
+        /* height: 600px; */
     }
 
     .left {
@@ -249,9 +249,15 @@ input[type="email"]::placeholder {
         margin-top: 9px;
         margin-bottom: 29px;
         padding: 1%;
-        font-size: 130%;
+        font-size: 15px;
         border-bottom: 2px solid black
 
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder,
+    input[type="email"]::placeholder{
+        font-size: 12px;
     }
 
     input[type="text"]:focus,
@@ -276,14 +282,17 @@ input[type="email"]::placeholder {
     .inA , .inB , .inC , .inD{
         width: 80%;
         margin-bottom: 0%;
+        font-size: 12px;
     }
     .acces{
         margin-bottom: 0%;
+        font-size: 12px;
     }
 
     .divsub{
-        height: 50px;
+        height: 35px;
         margin: 40px 0 0 0;
+        margin: 25px 0 0 0;
     }
 }
 
