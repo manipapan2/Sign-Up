@@ -38,7 +38,7 @@ body{
  .fp{
     position: relative ; 
     width: 320px ;
-    height: 500px ;
+    height: 500px;
     border-radius: 2px ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     background-color: transparent ;
@@ -48,7 +48,7 @@ body{
 
 
 .left{
-    justify-content: flex-end;
+
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -64,10 +64,10 @@ body{
 
 .divsub{
     display: flex;
-    margin-top: auto;
     width: 100%;
     height: 42px;
     justify-content: center;
+    margin: 12px 0 0 0;
 }
 /*=============================================*/
 
@@ -119,7 +119,7 @@ input[type="email"]{
   margin:0 0 20px 0;
   padding: 4px;
   width: 220px;
-  height: 32px;
+  height: 3 2px;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid black;
@@ -225,10 +225,13 @@ input[type="email"]::placeholder {
 
 
 @media only screen and (max-width: 767px) {
+    .bodyFake{
+        padding: 20px;
+    }
 
     .fp{
         width: 100%;
-        height: 100%;
+        height: 600px;
     }
 
     .left {
@@ -238,7 +241,7 @@ input[type="email"]::placeholder {
     }
 
     .dibsub{
-        margin-top: auto;
+        margin-top: 200px;
     }
 
     input[type="text"],
@@ -246,10 +249,9 @@ input[type="email"]::placeholder {
     input[type="email"]{
         
         width: 90%; 
-        height: 10%;
         margin-left: 2px;       
         margin-top: 9px;
-        margin-bottom: 9px;
+        margin-bottom: 29px;
         padding: 1%;
         font-size: 130%;
         border-bottom: 2px solid black
@@ -289,16 +291,16 @@ input[type="email"]::placeholder {
     }
 }
 
-@media only screen and (max-height: 600px) {
+/* @media only screen and (max-height: 600px) {
     .left{
         padding-top: 0px;
     }
-}
+} */
 
 @media only screen and (max-width: 401px) {
-    .inA , .inB , .inC , .inD{
+    /* .inA , .inB , .inC , .inD{
         font-size: 16px;
-    }
+    } */
 
     
     .acces{
