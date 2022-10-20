@@ -26,7 +26,7 @@ body{
     display: flex;
     justify-content: center ;
     align-items: center ;
-    background-image: url(nope.jfif);
+    background-image: url(/!images/nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -119,7 +119,7 @@ input[type="email"]{
   margin:0 0 20px 0;
   padding: 4px;
   width: 220px;
-  height: 32px;
+  height: 3 2px;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid black;
@@ -225,6 +225,9 @@ input[type="email"]::placeholder {
 
 
 @media only screen and (max-width: 767px) {
+    .bodyFake{
+        padding: 20px;
+    }
 
     .fp{
         width: 100%;
@@ -246,10 +249,9 @@ input[type="email"]::placeholder {
     input[type="email"]{
         
         width: 90%; 
-        height: 10%;
         margin-left: 2px;       
         margin-top: 9px;
-        margin-bottom: 9px;
+        margin-bottom: 29px;
         padding: 1%;
         font-size: 130%;
         border-bottom: 2px solid black
