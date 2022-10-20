@@ -22,7 +22,7 @@ body{
     height: 100vh;
     background-image: url(nope.jfif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover cover;
     background-position: center center;
 }
 
@@ -230,7 +230,7 @@ input[type="email"]::placeholder {
         background-size: cover cover;
         background-position: center center;
     }
-    
+
     .bodyFake{
         padding: 70px;
 
