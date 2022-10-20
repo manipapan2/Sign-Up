@@ -19,7 +19,7 @@ body{
     align-items: center ;
     width: 100vw;
     height: 100vh;
-    background-image: url(/!images/nope.jfif);
+    background-image: url(nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -229,10 +229,7 @@ input[type="email"]::placeholder {
 @media only screen and (max-width: 767px) {
     .bodyFake{
         padding: 60px;
-            background-image: url(/!images/nope.jfif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+
     }
 
     .fp{
