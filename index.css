@@ -17,6 +17,12 @@ body{
     font-weight: 300;
     justify-content: center ;
     align-items: center ;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/!images/nope.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .bodyFake{
@@ -25,10 +31,11 @@ body{
     display: flex;
     justify-content: center ;
     align-items: center ;
-    background-image: url(nope.jfif);
+    background-color: transparent;
+    /* background-image: url(/!images/nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center; */
 
     
 } 
@@ -222,7 +229,7 @@ input[type="email"]::placeholder {
 @media only screen and (max-width: 767px) {
     .bodyFake{
         padding: 60px;
-            background-image: url(nope.jfif);
+            background-image: url(/!images/nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
