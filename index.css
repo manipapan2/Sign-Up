@@ -20,10 +20,7 @@ body{
     align-items: center ;
     width: 100vw;
     height: 100vh;
-    background-image: url(nope.jfif);
-    background-repeat: no-repeat;
-    background-size: cover cover;
-    background-position: center center;
+
 }
 
 .bodyFake{
@@ -36,7 +33,7 @@ body{
     /* background-image: url(/!images/nope.jfif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center; */
+    background-position: center center; 
 
     
 } 
@@ -228,7 +225,7 @@ input[type="email"]::placeholder {
         padding: 70px;
             background-image: url(nope.jfif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover cover;
     background-position: center center;
     }
 
