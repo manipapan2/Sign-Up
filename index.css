@@ -135,11 +135,7 @@ input[type="email"]{
 }
 
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus{
-    border-bottom: 5px solid aqua;
-}
+
 
 
 input[type='submit']{
@@ -228,14 +224,18 @@ input[type="email"]::placeholder {
 
 @media only screen and (max-width: 767px) {
     .bodyFake{
-        padding: 60px;
-
+        padding: 70px;
+            background-image: url(nope.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     }
 
     .fp{
-        margin: 20px 0 0 0;
+        margin: 100px 0 0 0;
         padding: 0;
         width: 100%;
+        height: 500px;
         /* height: 600px; */
     }
 
@@ -258,6 +258,8 @@ input[type="email"]::placeholder {
 
     }
 
+
+
     input[type="text"]::placeholder,
     input[type="password"]::placeholder,
     input[type="email"]::placeholder{
@@ -267,7 +269,7 @@ input[type="email"]::placeholder {
     input[type="text"]:focus,
     input[type="password"]:focus,
     input[type="email"]:focus{
-    border-bottom: 10px solid aqua;
+    border-bottom: 5px solid aqua;
 }
 
 
@@ -312,9 +314,6 @@ input[type="email"]::placeholder {
     } */
 
     
-    .acces{
-        font-size: 16px;
-    }
 
 
     .left{

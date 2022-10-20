@@ -24,7 +24,6 @@ function checkname(){
     
     
     if(nameId === ""){
-        document.getElementById("inA").style.fontSize="14";
         document.getElementById("inA").innerHTML = "Please Enter Your Username";
         document.getElementById('inA').classList.remove("acces");
         document.getElementById('inA').classList.add("inA");
@@ -49,7 +48,6 @@ function checkname(){
     else{
         document.getElementById('inA').classList.add("acces");
         document.getElementById('inA').classList.remove("inA");
-        document.getElementById("inA").style.fontSize="14";
         document.getElementById("inA").innerHTML = "Good";
         return true;
 
