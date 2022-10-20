@@ -19,19 +19,37 @@ submitButton.addEventListener("click" , clickall);
 //functions===================================================================================
 function checkname(){
     var nameId = document.getElementById("nameId").value;
+    var nameIdlen = document.getElementById("nameId").length;
+    var num = [1,2,3,4,5,6,7,8,9,0];
     
     
     if(nameId === ""){
+        document.getElementById("inA").style.fontSize="14";
         document.getElementById("inA").innerHTML = "Please Enter Your Username";
         document.getElementById('inA').classList.remove("acces");
         document.getElementById('inA').classList.add("inA");
         return false;
     
     }
-        
+
+    if(nameId.length>12){
+        document.getElementById('inA').classList.remove("acces");
+        document.getElementById('inA').classList.add("inA");
+        document.getElementById("inA").innerHTML = "Your Name Can Not Be More Than 12 Character";
+        return false;
+    }
+
+    if(nameId.length<3){
+        document.getElementById('inA').classList.remove("acces");
+        document.getElementById('inA').classList.add("inA");
+        document.getElementById("inA").innerHTML = "Your Name Should Be At Least 3 Character";
+        return false;
+    }
+    
     else{
         document.getElementById('inA').classList.add("acces");
         document.getElementById('inA').classList.remove("inA");
+        document.getElementById("inA").style.fontSize="14";
         document.getElementById("inA").innerHTML = "Good";
         return true;
 
@@ -50,12 +68,18 @@ function checkpass(){
         return false;
         
     }
+    if(passasl.length<8){
+        document.getElementById("inB").innerHTML = "Your Password Must Be At Least 8 Character";
+        document.getElementById('inB').classList.remove("acces");
+        document.getElementById('inB').classList.add("inB");
+        return false;
+
+    }
     else{
         document.getElementById("inB").innerHTML = "Good";
         document.getElementById('inB').classList.add("acces");
         document.getElementById('inB').classList.remove("inB");
         return true;
-        
     }
 }
 
@@ -77,9 +101,9 @@ function checkcpass(){
         return true;
                 
     }
-            
+    
     else{
-        document.getElementById("inC").innerHTML = "Please Confirm Your password Corectly";
+        document.getElementById("inC").innerHTML = "Please Confirm Your password Correctly";
         document.getElementById('inC').classList.remove("acces");
         document.getElementById('inC').classList.add("inC");
         return false;
@@ -89,15 +113,61 @@ function checkcpass(){
 
 
 function checkemail(){
-    var email = document.getElementById("emailId").value; 
+    var email = document.getElementById("emailId").value;
+    var emailtrim = email.trim()
         
     if(email === ""){
         document.getElementById("inD").innerHTML = "Please Enter Your Gmail";
         document.getElementById('inD').classList.remove("acces");
         document.getElementById('inD').classList.add("inD");
         return false;
-            
     }
+
+
+    if(email.includes(" ")){
+        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+        document.getElementById('inD').classList.remove("acces");
+        document.getElementById('inD').classList.add("inD");
+        return false;
+    }
+
+
+    if(!email.includes("@")){
+        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+        document.getElementById('inD').classList.remove("acces");
+        document.getElementById('inD').classList.add("inD");
+        return false;
+    }
+        
+        else if(email.includes("@")){
+            let rool = email.split("@") 
+            if(rool[1] != "gmail.com"){        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;}
+
+            if(rool[0].includes("@")){
+                document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+                document.getElementById('inD').classList.remove("acces");
+                document.getElementById('inD').classList.add("inD");
+            return false;
+            }
+
+            // if(rool[0].match(("?=.*[@#$%^&+=]).*"))){
+            //     document.getElementById("inD").innerHTML = "regex";
+            //     document.getElementById('inD').classList.remove("acces");
+            //     document.getElementById('inD').classList.add("inD");
+            // return false;
+            // }
+
+            if(rool[1] == "gmail.com"){
+                document.getElementById("inD").innerHTML = "Good";
+                document.getElementById('inD').classList.add("acces");
+                document.getElementById('inD').classList.remove("inD");
+                return true;
+            }
+            }
+
     else{
         document.getElementById("inD").innerHTML = "Good";
         document.getElementById('inD').classList.add("acces");
@@ -234,5 +304,8 @@ function clickall(){
     }
     
 }
+
+ 
+
 
 //============================================================================================
