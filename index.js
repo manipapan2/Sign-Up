@@ -4,7 +4,7 @@ var passasl = document.getElementById("passasl");
 var passc = document.getElementById("passc");
 var emailId = document.getElementById("emailId");
 var submitButton = document.getElementById("submitButton");
-var acc = 
+let regex = "(?=.*[A-Z])"
 //============================================================================================
 
 //onkeyup=====================================================================================
@@ -41,7 +41,7 @@ function checkname(){
     if(nameId.length<3){
         document.getElementById('inA').classList.remove("acces");
         document.getElementById('inA').classList.add("inA");
-        document.getElementById("inA").innerHTML = "Your Name Should Be At Least 3 Character";
+        document.getElementById("inA").innerHTML = "Your Username Should Be At Least 3 Character";
         return false;
     }
     
@@ -73,6 +73,15 @@ function checkpass(){
         return false;
 
     }
+
+    if(!passasl.match("([A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]*")){
+        document.getElementById("inB").innerHTML = "Your Password Must Contains At Least 1 Character And 1 Letter";
+        document.getElementById('inB').classList.remove("acces");
+        document.getElementById('inB').classList.add("inB");
+        return false;
+    }
+
+
     else{
         document.getElementById("inB").innerHTML = "Good";
         document.getElementById('inB').classList.add("acces");
@@ -112,7 +121,7 @@ function checkcpass(){
 
 function checkemail(){
     var email = document.getElementById("emailId").value;
-    var emailtrim = email.trim()
+    
         
     if(email === ""){
         document.getElementById("inD").innerHTML = "Please Enter Your Gmail";
@@ -137,34 +146,39 @@ function checkemail(){
         return false;
     }
         
-        else if(email.includes("@")){
-            let rool = email.split("@") 
-            if(rool[1] != "gmail.com"){        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+    else if(email.includes("@")){
+        let rool = email.split("@") 
+        if(rool[1] != "gmail.com"){        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
             return false;}
 
-            if(rool[0].includes("@")){
-                document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-                document.getElementById('inD').classList.remove("acces");
-                document.getElementById('inD').classList.add("inD");
+        if(rool[0].includes("@")){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
             return false;
-            }
+        }
 
-            // if(rool[0].match(("?=.*[@#$%^&+=]).*"))){
-            //     document.getElementById("inD").innerHTML = "regex";
-            //     document.getElementById('inD').classList.remove("acces");
-            //     document.getElementById('inD').classList.add("inD");
-            // return false;
-            // }
 
-            if(rool[1] == "gmail.com"){
-                document.getElementById("inD").innerHTML = "Good";
-                document.getElementById('inD').classList.add("acces");
-                document.getElementById('inD').classList.remove("inD");
-                return true;
+        if(rool[0] == ""){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+
+        if(rool[1] == "gmail.com"){
+            document.getElementById("inD").innerHTML = "Good";
+            document.getElementById('inD').classList.add("acces");
+            document.getElementById('inD').classList.remove("inD");
+            return true;
+        }
+
+
             }
-            }
+            
 
     else{
         document.getElementById("inD").innerHTML = "Good";
