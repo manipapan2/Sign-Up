@@ -308,6 +308,10 @@ function clickall(){
         submitButton.style.background = "#1c4d43"
         loading.style.display = "block";  
         submitButton.style.pointerEvents = "none";
+        nameId.style.pointerEvents = "none";
+        passasl.style.pointerEvents = "none";
+        passc.style.pointerEvents = "none";
+        emailId.style.pointerEvents = "none";
         
     }
     else{
