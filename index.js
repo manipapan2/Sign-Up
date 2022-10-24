@@ -146,9 +146,18 @@ function checkemail(){
         return false;
     }
         
-    else if(email.includes("@")){
+    if(email.includes("@")){
         let rool = email.split("@") 
-        if(rool[1] != "gmail.com"){        document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+
+        if(rool[1].match("(?=.*[A-Z])")){
+            document.getElementById("inD").innerHTML = "Only Lowercase Is Allowed";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+        if(rool[1] != "gmail.com"){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
             return false;}
@@ -167,6 +176,7 @@ function checkemail(){
             document.getElementById('inD').classList.add("inD");
             return false;
         }
+
 
 
         if(rool[1] == "gmail.com"){
@@ -188,6 +198,7 @@ function checkemail(){
 
     }
 }
+
 
 
 function checknamel(){
@@ -306,12 +317,13 @@ function clickall(){
 
         text.style.display = "none"
         submitButton.style.background = "#1c4d43"
-        loading.style.display = "block";  
+        loading.style.display = "block";
         submitButton.style.pointerEvents = "none";
         nameId.style.pointerEvents = "none";
         passasl.style.pointerEvents = "none";
         passc.style.pointerEvents = "none";
         emailId.style.pointerEvents = "none";
+
         
     }
     else{
