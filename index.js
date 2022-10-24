@@ -150,7 +150,7 @@ function checkemail(){
         let rool = email.split("@") 
 
         if(rool[1].match("(?=.*[A-Z])")){
-            document.getElementById("inD").innerHTML = "Only Lowercase Is Allowed";
+            document.getElementById("inD").innerHTML = "Only Lowercase Is Not Allowed";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
             return false;
@@ -356,7 +356,7 @@ function checkemaill(){
         let rool = email.split("@") 
 
         if(rool[1].match("(?=.*[A-Z])")){
-            document.getElementById("inD").innerHTML = "Only Lowercase Is Allowed";
+            document.getElementById("inD").innerHTML = "Only Lowercase Is Not Allowed";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
             document.getElementById("emailId").classList.add("larzesh");
