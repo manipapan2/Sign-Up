@@ -436,6 +436,14 @@ function clickall(){
         passasl.style.pointerEvents = "none";
         passc.style.pointerEvents = "none";
         emailId.style.pointerEvents = "none";
+        setTimeout(() => document.getElementById("left").classList.add("fadean") , "3000")
+        setTimeout(() => document.getElementById("left").style.opacity="0", "3500")
+        setTimeout(() => document.getElementById("left").style.display="none", "3500")
+        setTimeout(() => document.getElementById("sabz").style.display="flex", "3600")
+        setTimeout(() => document.getElementById("sabz").style.opacity="0", "3600")
+        setTimeout(() => document.getElementById("sabz").classList.add("fadeanb"), "3600")
+        setTimeout(() => document.getElementById("sabz").style.opacity="1", "4100")
+        
 
         
     }
