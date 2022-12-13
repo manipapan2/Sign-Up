@@ -149,6 +149,70 @@ function checkemail(){
     if(email.includes("@")){
         let rool = email.split("@") 
 
+
+        
+
+
+        if(rool[0].match('[!#$%&()*+,-./=?]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+        
+        // if(rool[0].match('[\/]')){
+        //     document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+        //     document.getElementById('inD').classList.remove("acces");
+        //     document.getElementById('inD').classList.add("inD");
+        //     return false;
+        // }
+
+        if(rool[0].match('["]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+
+        if(rool[0].match("[']")){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+
+        if(rool[0].match('[[]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+        
+        if(rool[0].match('[]]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+        
+        if(rool[0].match('[{]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+        if(rool[0].match('[}]')){
+            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
+            document.getElementById('inD').classList.remove("acces");
+            document.getElementById('inD').classList.add("inD");
+            return false;
+        }
+
+
         if(rool[1].match("(?=.*[A-Z])")){
             document.getElementById("inD").innerHTML = "Only Lowercase Is Allowed";
             document.getElementById('inD').classList.remove("acces");
@@ -161,6 +225,7 @@ function checkemail(){
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
             return false;}
+
 
         if(rool[0].includes("@")){
             document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
