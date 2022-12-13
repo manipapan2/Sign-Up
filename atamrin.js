@@ -150,62 +150,8 @@ function checkemail(){
         let rool = email.split("@") 
 
 
-        
 
-
-        if(rool[0].match('[!#$%&()*+,-./=?]')){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-        
-        // if(rool[0].match('[\/]')){
-        //     document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-        //     document.getElementById('inD').classList.remove("acces");
-        //     document.getElementById('inD').classList.add("inD");
-        //     return false;
-        // }
-
-        if(rool[0].match('["]')){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-
-
-        if(rool[0].match("[']")){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-
-
-        if(rool[0].match('[[]')){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-
-        
-        if(rool[0].match('[]]')){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-        
-        if(rool[0].match('[{]')){
-            document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
-            document.getElementById('inD').classList.remove("acces");
-            document.getElementById('inD').classList.add("inD");
-            return false;
-        }
-
-        if(rool[0].match('[}]')){
+        if(rool[0].match("[^abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890]")){
             document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
