@@ -4,6 +4,8 @@ var passasl = document.getElementById("passasl");
 var passc = document.getElementById("passc");
 var emailId = document.getElementById("emailId");
 var submitButton = document.getElementById("submitButton");
+var alertDiv = document.getElementById("alertDiv")
+var alertF = document.getElementById("alertF")
 let regex = "(?=.*[A-Z])"
 //============================================================================================
 
@@ -14,6 +16,11 @@ passasl.addEventListener("keyup" , checkcpass);
 passc.addEventListener("keyup" , checkcpass);
 emailId.addEventListener("keyup" , checkemail);
 submitButton.addEventListener("click" , clickall);
+// document.getElementById("bodyFake").addEventListener("mouseover",() => {
+//     if(window.getComputedStyle(alertF).width == "1px"){
+//         alertF.style.width = "0px"
+//     }
+// })
 //============================================================================================
 
 //functions===================================================================================
@@ -329,7 +336,9 @@ function checkcpassl(){
     }
 }
     
-    
+var gann = 1
+var widg = 100
+
 function checkemaill(){
     var email = document.getElementById("emailId").value;
     
@@ -376,6 +385,21 @@ function checkemaill(){
         }
 
         if(rool[1] != "gmail.com"){
+            gann = gann + 1
+            if(gann == 2){
+                alertDiv.classList.add("alertDivanimation")
+                setTimeout(() => {
+                    alertDiv.style.top="20";alertDiv.style.opacity="1"
+                }, "800");
+                setTimeout(() => {
+                    alertF.classList.add("alertDivafteranimation")
+                }, "800");
+                // setTimeout(() => {
+                //     alertDiv.classList.remove("alertDivanimation")
+                //     alertDiv.classList.add("alertDivanimationreverse")
+                // }, "8800");
+
+            }
             document.getElementById("inD").innerHTML = "Please Enter Your Gmail Correctly";
             document.getElementById('inD').classList.remove("acces");
             document.getElementById('inD').classList.add("inD");
@@ -425,6 +449,26 @@ function checkemaill(){
     }
 }
 
+alertDiv.addEventListener("mouseenter",pausean)
+alertDiv.addEventListener("mouseleave",playan)
+document.getElementById("zabdar").addEventListener("click",baste)
+
+function pausean(){
+    alertF.style.animationPlayState="paused"
+}
+
+
+function playan(){
+    alertF.style.animationPlayState="running"
+}
+
+function baste(){
+    alertDiv.classList.remove("alertDivanimation")
+    alertDiv.classList.add("alertDivanimationreverse")
+    setTimeout(() => {
+        alertDiv.style.opacity="0"
+    }, "200");
+}
 
 
 function pak(){

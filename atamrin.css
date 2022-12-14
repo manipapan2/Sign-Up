@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -37,9 +39,107 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+   
+}
 
-    
-} 
+
+.alertDiv{
+    position: relative;
+    display: flex;
+    opacity: 0;
+    top: -40px;
+    position: absolute;
+    width: 320px ;
+    height: 40px;
+    background-color: rgb(245, 229, 200);
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.alertF{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+}
+
+
+.alertDivanimation{
+    animation: 0.8s aki linear;
+}
+
+.alertDivanimationreverse{
+    animation: 0.2s ak4 linear;
+}
+
+.alertDivafteranimation{
+    animation: 8s aai linear;
+}
+
+
+@keyframes aki {
+    80%{opacity: 0;}
+    100%{top: 20px;opacity: 1;}
+}
+
+
+@keyframes ak4 {
+    100%{opacity: 0;}
+}
+
+
+@keyframes aai {
+    to{width: 0%;}
+}
+
+
+
+.alertDiv p{
+    width: 200px;
+    font-size: 14;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin: auto;
+
+}
+
+.zabdar{
+    display: flex;
+    position: relative;
+    width: 40px;
+    /* height: 100%;background-color: pink; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.zabdar::after{
+    position: absolute;
+    content: "";
+    margin: auto;
+    width: 25px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: rgb(131, 207, 207);
+    transform: rotate(45deg);
+}
+
+
+.zabdar::before{
+    position: absolute;
+    content: "";
+    margin: auto;
+    width: 25px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: rgb(131, 207, 207);
+    transform: rotate(-45deg);
+}
+
 
 
  .fp{
@@ -284,6 +384,10 @@ input[type="email"]::placeholder {
     .left {
         padding: 40px;
         
+    }
+
+    .alertDiv{
+        width: 80%;
     }
 
     input[type="text"],
