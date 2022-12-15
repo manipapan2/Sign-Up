@@ -452,6 +452,15 @@ function checkemaill(){
 alertDiv.addEventListener("mouseenter",pausean)
 alertDiv.addEventListener("mouseleave",playan)
 document.getElementById("zabdar").addEventListener("click",baste)
+setInterval(() => {
+    let gec = window.getComputedStyle(alertF).width
+    let rooa = gec.split("p")
+    let road = parseInt(rooa[0])
+    if(road < 1){
+        alertF.style.width="0"
+        baste()
+    }
+}, 1);
 
 function pausean(){
     alertF.style.animationPlayState="paused"
